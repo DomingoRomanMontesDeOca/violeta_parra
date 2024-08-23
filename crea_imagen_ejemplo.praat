@@ -1,3 +1,7 @@
+# Crea la imagen de ejemplo que se presenta en el documento.
+# Requiere el TextGrid y el Pitch editado.
+# Hace uso del segundo intervalo (primer verso de la décima)
+
 tg = selected("TextGrid")
 
 tono = selected("Pitch")
