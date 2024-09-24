@@ -4,7 +4,7 @@ tono = selected("Pitch")
 tg = selected("TextGrid")
 
 select tono
-stono_suavizado = Smooth: 10
+tono_suavizado = Smooth: 10
 pp = To PointProcess
 
 writeInfoLine: "composicion,caracter,estrofa,verso,acentos,duracion,xf0,stMm,stT"
@@ -101,21 +101,28 @@ for i to n_intervalos_tier_1
 
 			select pp
 
-			inicio_f0_verso = Get high index: ini_verso
+			indx_ini_f0_verso = Get high index: ini_verso
 
-			f0_inicio_verso = Get time from index: inicio_f0_verso
+			tiempo_ini_f0_verso = Get time from index: indx_ini_f0_verso
+
+			select tono_suavizado
+
+			f0_inicio_verso = Get value at time: tiempo_ini_f0_verso, "Hertz", "linear"
+
    
 			f0_final_verso = f0_tonema_fin
 
 			st_f0_ini_fin_verso = 12*log2(f0_final_verso/f0_inicio_verso)
 
-			distancia_puntos = (tiempo_tonema_fin - f0_inicio_verso)
+			distancia_puntos = (tiempo_tonema_fin - tiempo_ini_f0_verso)
 
 			pend_st_verso = st_f0_ini_fin_verso/(distancia_puntos)
 
 
+
+
 			appendInfoLine: composicion$,",",caracter$,",",estrofa$,",",ene_de_verso$,",",ene_acentos$,",",duracion_verso,",",xf0,",",st_M_m,",",st_tonema,",",pend_st_verso
-			endif
+		endif
 
 		endfor
 
