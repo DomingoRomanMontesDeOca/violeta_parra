@@ -7,7 +7,7 @@ select tono
 tono_suavizado = Smooth: 10
 pp = To PointProcess
 
-writeInfoLine: "composicion,caracter,estrofa,verso,acentos,duracion,xf0,stMm,stT"
+writeInfoLine: "composicion,caracter,verso,acentos,duracion,xf0,st_M_m,st_tonema,pendiente_verso,pendiente_tonema"
 
 
 
@@ -94,10 +94,14 @@ for i to n_intervalos_tier_1
 			f0_tonema_fin = Get value at time: tiempo_tonema_fin, "Hertz", "linear"
 			st_tonema = 12*log2(f0_tonema_fin/f0_tonema_ini)
 
+			distancia_ini_fin_tonema = tiempo_tonema_fin  - tiempo_tonema_ini
+
+			pendiente_tonema = st_tonema/distancia_ini_fin_tonema
 
 
 
-###  Pendiente
+
+###  Pendiente del verso
 
 			select pp
 
@@ -120,8 +124,15 @@ for i to n_intervalos_tier_1
 
 
 
+### Pendiente del tonema
 
-			appendInfoLine: composicion$,",",caracter$,",",estrofa$,",",ene_de_verso$,",",ene_acentos$,",",duracion_verso,",",xf0,",",st_M_m,",",st_tonema,",",pend_st_verso
+
+			
+			
+
+
+
+			appendInfoLine: composicion$,",",caracter$,",",estrofa$,",",ene_de_verso$,",",ene_acentos$,",",duracion_verso,",",xf0,",",st_M_m,",",st_tonema,",",pend_st_verso,",",pendiente_tonema
 		endif
 
 		endfor
