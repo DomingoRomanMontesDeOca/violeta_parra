@@ -118,6 +118,7 @@ dursegs = c(1,2)
 valoresf0 = c(150,400)
 rangost <- c(0,25)
 rangost_T <- c(-20,5)
+rangoP <- c(-10,10)
 #########################
 
 
@@ -270,7 +271,7 @@ plot(quinta003[,4], quinta003[,8], type="b", col = "orange", ylim= rangost, ylab
 
 
 ## Rango en st tonema
-plot.new()
+par(mfrow= c(1,3))
 plot(primera001[,4],primera001[,9], type="b", col = "red", ylim= rangost_T, ylab= "st", xlab = "Versos", main = "st tonema estrofa 001a")
 axis(1, at=(1:10), labels=axis_versos)
 abline(v=4.5)
@@ -285,7 +286,7 @@ par(new=TRUE)
 plot(quinta001[,4], quinta001[,9], type="b", col = "orange", ylim= rangost_T, ylab = "", xlab = "", axes = FALSE)
 
 
-plot.new()
+
 plot(primera002[,4],primera002[,9], type="b", col = "red", ylim= rangost_T, ylab= "st", xlab = "Versos", main = "st tonema estrofa 002b")
 axis(1, at=(1:10), labels=axis_versos)
 abline(v=4.5)
@@ -300,7 +301,6 @@ par(new=TRUE)
 plot(quinta002[,4], quinta002[,9], type="b", col = "orange", ylim= rangost_T, ylab = "", xlab = "", axes = FALSE)
 
 
-plot.new()
 plot(primera003[,4],primera003[,9], type="b", col = "red", ylim= rangost_T, ylab= "st", xlab = "Versos", main = "st tonema estrofa 003z")
 axis(1, at=(1:10), labels=axis_versos)
 abline(v=4.5)
@@ -313,6 +313,56 @@ par(new=TRUE)
 plot(cuarta003[,4], cuarta003[,9], type="b", col = "brown", ylim= rangost_T, ylab = "", xlab = "", axes = FALSE)
 par(new=TRUE)
 plot(quinta003[,4], quinta003[,9], type="b", col = "orange", ylim= rangost_T, ylab = "", xlab = "", axes = FALSE)
+
+
+
+#### Pendiente
+par(mfrow= c(1,3))
+plot(primera001[,4],primera001[,10], type="b", col = "red", ylim= rangoP, ylab= "st/s", xlab = "Versos", main = "Pendiente composición 1")
+axis(1, at=(1:10), labels=axis_versos)
+abline(v=4.5)
+grid()
+par(new=TRUE)
+plot(segunda001[,4], segunda001[,10], type="b", col = "blue", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(tercera001[,4], tercera001[,10], type="b", col = "green", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(cuarta001[,4], cuarta001[,10], type="b", col = "brown", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(quinta001[,4], quinta001[,10], type="b", col = "orange", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+
+
+
+plot(primera002[,4],primera002[,10], type="b", col = "red", ylim= rangoP, ylab= "st/s", xlab = "Versos", main = "Pendiente composición 2")
+axis(1, at=(1:10), labels=axis_versos)
+abline(v=4.5)
+grid()
+par(new=TRUE)
+plot(segunda002[,4], segunda002[,10], type="b", col = "blue", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(tercera002[,4], tercera002[,10], type="b", col = "green", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(cuarta002[,4], cuarta002[,10], type="b", col = "brown", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(quinta002[,4], quinta002[,10], type="b", col = "orange", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+
+
+
+plot(primera003[,4],primera003[,10], type="b", col = "red", ylim= rangoP, ylab= "st/s", xlab = "Versos", main = "Pendiente composición 3")
+axis(1, at=(1:10), labels=axis_versos)
+abline(v=4.5)
+grid()
+par(new=TRUE)
+plot(segunda003[,4], segunda003[,10], type="b", col = "blue", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(tercera003[,4], tercera003[,10], type="b", col = "green", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(cuarta003[,4], cuarta003[,10], type="b", col = "brown", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(quinta003[,4], quinta003[,10], type="b", col = "orange", ylim= rangoP, ylab = "", xlab = "", axes = FALSE)
+
+
+
 
 
 
