@@ -1,6 +1,9 @@
-#Casa
+#Casa mapa
 setwd("/Users/Mapa/Documents/violeta_parra")
 
+
+# casa Imac
+setwd("/Users/guru/Documents/vparra/corpus")
 
 # Universidad
 setwd("/Users/imac/Documents/violetaParra/septiembre2024")
@@ -119,6 +122,7 @@ valoresf0 = c(150,400)
 rangost <- c(0,25)
 rangost_T <- c(-20,5)
 rangoP <- c(-10,10)
+rangoPT <- c(-80, 20)
 #########################
 
 
@@ -316,7 +320,7 @@ plot(quinta003[,4], quinta003[,9], type="b", col = "orange", ylim= rangost_T, yl
 
 
 
-#### Pendiente
+#### Pendiente del verso
 par(mfrow= c(1,3))
 plot(primera001[,4],primera001[,10], type="b", col = "red", ylim= rangoP, ylab= "st/s", xlab = "Versos", main = "Pendiente composición 1")
 axis(1, at=(1:10), labels=axis_versos)
@@ -365,6 +369,51 @@ plot(quinta003[,4], quinta003[,10], type="b", col = "orange", ylim= rangoP, ylab
 
 
 
+
+#### Pendiente del tonema
+par(mfrow= c(1,3))
+plot(primera001[,4],primera001[,11], type="b", col = "red", ylim= rangoPT, ylab= "st/s", xlab = "Versos", main = "Pendiente del tonema composición 1")
+axis(1, at=(1:10), labels=axis_versos)
+abline(v=4.5)
+grid()
+par(new=TRUE)
+plot(segunda001[,4], segunda001[,11], type="b", col = "blue", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(tercera001[,4], tercera001[,11], type="b", col = "green", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(cuarta001[,4], cuarta001[,11], type="b", col = "brown", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(quinta001[,4], quinta001[,11], type="b", col = "orange", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+
+
+
+plot(primera002[,4],primera002[,11], type="b", col = "red", ylim= rangoPT, ylab= "st/s", xlab = "Versos", main = "Pendiente del tonema composición 2")
+axis(1, at=(1:10), labels=axis_versos)
+abline(v=4.5)
+grid()
+par(new=TRUE)
+plot(segunda002[,4], segunda002[,11], type="b", col = "blue", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(tercera002[,4], tercera002[,11], type="b", col = "green", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(cuarta002[,4], cuarta002[,11], type="b", col = "brown", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(quinta002[,4], quinta002[,11], type="b", col = "orange", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+
+
+
+plot(primera003[,4],primera003[,11], type="b", col = "red", ylim= rangoPT, ylab= "st/s", xlab = "Versos", main = "Pendiente del tonema composición 3")
+axis(1, at=(1:10), labels=axis_versos)
+abline(v=4.5)
+grid()
+par(new=TRUE)
+plot(segunda003[,4], segunda003[,11], type="b", col = "blue", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(tercera003[,4], tercera003[,11], type="b", col = "green", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(cuarta003[,4], cuarta003[,11], type="b", col = "brown", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
+par(new=TRUE)
+plot(quinta003[,4], quinta003[,11], type="b", col = "orange", ylim= rangoPT, ylab = "", xlab = "", axes = FALSE)
 
 
 
