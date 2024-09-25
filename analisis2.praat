@@ -7,7 +7,7 @@ select tono
 tono_suavizado = Smooth: 10
 pp = To PointProcess
 
-writeInfoLine: "composicion,caracter,verso,acentos,duracion,xf0,st_M_m,st_tonema,pendiente_verso,pendiente_tonema"
+writeInfoLine: "composicion,caracter,estrofa,verso,acentos,duracion,xf0,st_M_m,st_tonema,pendiente_verso,pendiente_tonema"
 
 
 
