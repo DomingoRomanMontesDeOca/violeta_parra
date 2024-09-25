@@ -11,7 +11,7 @@ item []:
         name = "1" 
         xmin = 0 
         xmax = 71.83563399894872 
-        intervals: size = 10 
+        intervals: size = 11 
         intervals [1]:
             xmin = 0 
             xmax = 0.010674385212220939 
@@ -42,14 +42,18 @@ item []:
             text = "" 
         intervals [8]:
             xmin = 43.62596419895455 
-            xmax = 58.698958601867815 
+            xmax = 57.94031484966047 
             text = "4" 
         intervals [9]:
-            xmin = 58.698958601867815 
-            xmax = 71.77315410774501 
-            text = "5" 
+            xmin = 57.94031484966047 
+            xmax = 58.698958601867815 
+            text = "" 
         intervals [10]:
-            xmin = 71.77315410774501 
+            xmin = 58.698958601867815 
+            xmax = 71.83563377159892 
+            text = "5" 
+        intervals [11]:
+            xmin = 71.83563377159892 
             xmax = 71.83563399894872 
             text = "" 
     item [2]:
@@ -57,7 +61,7 @@ item []:
         name = "2" 
         xmin = 0 
         xmax = 71.83563399894872 
-        intervals: size = 74 
+        intervals: size = 75 
         intervals [1]:
             xmin = 0 
             xmax = 0.010674385212220939 
@@ -352,8 +356,12 @@ item []:
             text = "9,2" 
         intervals [74]:
             xmin = 70.64030561291489 
-            xmax = 71.83563399894872 
+            xmax = 71.83563377159892 
             text = "10,2" 
+        intervals [75]:
+            xmin = 71.83563377159892 
+            xmax = 71.83563399894872 
+            text = "" 
     item [3]:
         class = "TextTier" 
         name = "3" 
