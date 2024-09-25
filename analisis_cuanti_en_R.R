@@ -12,7 +12,7 @@ setwd("/Users/imac/Documents/violetaParra/septiembre2024")
 data <- read.csv('data.txt')
 
 # por estrofa
-data_g <- read.csv('data_g.txt')
+data_g <- read.csv('data_g.Table')
 str(data_g)
 comp001 <- subset(data_g,composicion == 1)
 comp002 <- subset(data_g,composicion == 2)
@@ -419,11 +419,44 @@ plot(quinta003[,4], quinta003[,11], type="b", col = "orange", ylim= rangoPT, yla
 
 
 # general por estrofa
-par(mfrow=c(1,3))
-plot(data_g[,2],type="b", ylab= "segundos", xlab="Estrofa", main ="Duración")
+par(mfrow=c(2,2))
+plot(comp001[,4],type="b", ylab= "segundos", xlab="Estrofa", main ="Duración", col = "red", ylim= c(12,18))
 grid()
+par(new=TRUE)
+plot(comp002[,4],type="b", ylab= "", xlab="", main ="", col = "blue", ylim= c(12,18))
+par(new=TRUE)
+plot(comp003[,4],type="b", ylab= "", xlab="", main ="", col = "gray", ylim= c(12,18))
 
-plot(data_g[,3],type="b", ylab= "Hz", xlab="Estrofa", main = "Promedio f0")
+
+plot(comp001[,7],type="b", ylab= "segundos", xlab="Estrofa", main ="Cantidad de pausas", col = "red", ylim= c(0,5))
+grid()
+par(new=TRUE)
+plot(comp002[,7],type="b", ylab= "", xlab="", main ="", col = "blue", ylim= c(0,5))
+par(new=TRUE)
+plot(comp003[,7],type="b", ylab= "", xlab="", main ="", col = "gray", ylim= c(0,5))
+
+
+plot(comp001[,6],type="b", ylab= "segundos", xlab="Estrofa", main ="Tiempo de pausas", col = "red", ylim= c(0,3))
+grid()
+par(new=TRUE)
+plot(comp002[,6],type="b", ylab= "", xlab="", main ="", col = "blue", ylim= c(0,3))
+par(new=TRUE)
+plot(comp003[,6],type="b", ylab= "", xlab="", main ="", col = "gray", ylim= c(0,3))
+
+
+
+plot(comp001[,9],type="b", ylab= "segundos", xlab="Estrofa", main ="Tiempo de enunciados", col = "red", ylim= c(10,18))
+grid()
+par(new=TRUE)
+plot(comp002[,9],type="b", ylab= "", xlab="", main ="", col = "blue", ylim= c(10,18))
+par(new=TRUE)
+plot(comp003[,9],type="b", ylab= "", xlab="", main ="", col = "gray", ylim= c(10,18))
+
+
+
+
+#### otro archivo
+plot(data_g[,3],type="b", ylab= "Hz", xlab="Estrofa", main = "Promedio f0", ylim= c(12,16))
 grid()
 
 plot(data_g[,6],type="b", ylab= "st", xlab="Estrofa", main = "Rango st")
