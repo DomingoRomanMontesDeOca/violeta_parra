@@ -13,17 +13,23 @@ data <- read.csv('data.txt')
 
 # por estrofa
 data_g <- read.csv('data_g.Table')
-str(data_g)
+
+
+data_8 <- read.csv('elevacion_8_verso.txt')
+
+# data_8
+elev_8_1 <- subset(data_8, composicion == 1)
+elev_8_2 <- subset(data_8, composicion == 2)
+elev_8_3 <- subset(data_8, composicion == 3)
+
+
+# data_g
 comp001 <- subset(data_g,composicion == 1)
 comp002 <- subset(data_g,composicion == 2)
 comp003 <- subset(data_g,composicion == 3)
 
 
-
-
-
-
-
+data_g_2 <- read.csv('data_g_2.txt')
 
 
 str(data)
@@ -456,8 +462,54 @@ plot(comp003[,9],type="b", ylab= "", xlab="", main ="", col = "gray", ylim= c(10
 
 
 #### otro archivo
-plot(data_g[,3],type="b", ylab= "Hz", xlab="Estrofa", main = "Promedio f0", ylim= c(12,16))
+frec_comp_1 <- subset(data_g_2, composicion == 1)
+frec_comp_2 <- subset(data_g_2, composicion == 2)
+frec_comp_3 <- subset(data_g_2, composicion == 3)
+par(mfrow=c(1,2))
+plot(frec_comp_1[,5],type="b", ylab= "Hz", xlab="Estrofas", main = "Promedio f0",ylim=c(220,320), col = "red")
 grid()
+par(new=TRUE)
+plot(frec_comp_2[,5],type="b", ylab= "", xlab="",ylim=c(220,320), col = "blue")
+par(new=TRUE)
+plot(frec_comp_3[,5],type="b", ylab= "", xlab="", ylim=c(220,320), col = "gray")
 
-plot(data_g[,6],type="b", ylab= "st", xlab="Estrofa", main = "Rango st")
+
+
+plot(frec_comp_1[,8],type="b", ylab= "st", xlab="Estrofas", main = "Rango en st", ylim =c(5,30), col = "red")
 grid()
+par(new=TRUE)
+plot(frec_comp_2[,8],type="b", ylab= "", xlab="",ylim =c(5,30), col = "blue")
+par(new=TRUE)
+plot(frec_comp_3[,8],type="b", ylab= "", xlab="", ylim =c(5,30), col = "gray")
+
+
+
+# Gráficos de la elevación del octavo verso
+# Distancia porcentual de la elevación
+
+par(mfrow=c(1,3))
+plot(elev_8_1[,5], type="b", col = "red", main = "Distancia porcentual del inicio de la inflexión", xlab="Estrofas", ylab= "Porcentaje", ylim=c(20,70))
+grid()
+par(new=TRUE)
+plot(elev_8_2[,5], type="b", col = "blue",xlab="", ylab= "",  ylim=c(20,70))
+par(new=TRUE)
+plot(elev_8_3[,5], type="b", col = "gray",xlab="", ylab= "",  ylim=c(20,70))
+
+
+# SEmitonos de elevación
+plot(elev_8_1[,6], type="b", col = "red", main = "Semitonos de la elevación", xlab="Estrofas", ylab= "st", ylim=c(0,12))
+grid()
+par(new=TRUE)
+plot(elev_8_2[,6], type="b", col = "blue",xlab="", ylab= "",  ylim=c(0,12))
+par(new=TRUE)
+plot(elev_8_3[,6], type="b", col = "gray",xlab="", ylab= "",  ylim=c(0,12))
+
+
+# Pendiente de la elevación
+plot(elev_8_1[,7], type="b", col = "red", main = "Pendiente de la elevación", xlab="Estrofas", ylab= "st/s", ylim=c(0,25))
+grid()
+par(new=TRUE)
+plot(elev_8_2[,7], type="b", col = "blue",xlab="", ylab= "",  ylim=c(0,25))
+par(new=TRUE)
+plot(elev_8_3[,7], type="b", col = "gray",xlab="", ylab= "",  ylim=c(0,25))
+
