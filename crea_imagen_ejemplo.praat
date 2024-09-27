@@ -4,7 +4,12 @@
 
 tg = selected("TextGrid")
 
-tono = selected("Pitch")
+tono2 = selected("Pitch")
+
+
+select tono2
+tono = Smooth: 10
+
 
 
 select tg
@@ -33,7 +38,9 @@ Marks right every: 1, 100, "yes", "yes", "yes"
 
 Text right: "yes", "Hz"
 
-Select inner viewport: 0.5, 9.5, 0.5, 3.1
+Select inner viewport: 0.5, 9.5, 0.5, 3.5
+
+Draw inner box
 
 select tg
 
@@ -54,24 +61,29 @@ tiempo_12 = Get end time of interval: 2, 13
 tiempo_13 = Get end time of interval: 2, 14
 tiempo_14 = Get end time of interval: 2, 15
 
-Line width: 0.5
 
-Draw line: tiempo_1,-2.5, tiempo_1, 1
+Draw line: tiempo_1,-1, tiempo_1, 1
+Draw line: tiempo_1, -1, tiempo_1, 1
+Draw line: tiempo_2, -1, tiempo_2, 1
+Draw line: tiempo_3, -1, tiempo_3, 1
+Draw line: tiempo_4, -1, tiempo_4, 1
+Draw line: tiempo_5, -1, tiempo_5, 1
+Draw line: tiempo_6, -1, tiempo_6, 1
+Draw line: tiempo_7, -1, tiempo_7, 1
+Draw line: tiempo_8, -1, tiempo_8, 1
+Draw line: tiempo_9, -1, tiempo_9, 1
+Draw line: tiempo_10, -1, tiempo_10, 1
+Draw line: tiempo_11, -1, tiempo_11, 1
+Draw line: tiempo_12, -1, tiempo_12, 1
+Draw line: tiempo_13, -1, tiempo_13, 1
 
-Draw line: tiempo_1, -2.5, tiempo_1, 1
-Draw line: tiempo_2, -2.5, tiempo_2, 1
-Draw line: tiempo_3, -2.5, tiempo_3, 1
-Draw line: tiempo_4, -2.5, tiempo_4, 1
-Draw line: tiempo_5, -2.5, tiempo_5, 1
-Draw line: tiempo_6, -2.5, tiempo_6, 1
-Draw line: tiempo_7, -2.5, tiempo_7, 1
-Draw line: tiempo_8, -2.5, tiempo_8, 1
-Draw line: tiempo_9, -2.5, tiempo_9, 1
-Draw line: tiempo_10, -2.5, tiempo_10, 1
-Draw line: tiempo_11, -2.5, tiempo_11, 1
-Draw line: tiempo_12, -2.5, tiempo_12, 1
-Draw line: tiempo_13, -2.5, tiempo_13, 1
-Draw line: tiempo_14, -2.5, tiempo_14, 1
+# Estrofa
+# Verso y número de acentos
+# Inicio y fin del tonema
+# inicio de inflexión en el verso 8
+
+Select outer viewport: 0.5, 10.15, 0.43, 3.5
 
 
-Select outer viewport: 0.5, 10.15, 0.43, 3.1
+select tono
+Remove
