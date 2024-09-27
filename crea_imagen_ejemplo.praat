@@ -1,6 +1,7 @@
 # Crea la imagen de ejemplo que se presenta en el documento.
 # Requiere el TextGrid y el Pitch editado.
-# Hace uso del segundo intervalo (primer verso de la décima)
+# Ell TextGrid muestra estrofa, verso, marcas del tonema e inicio de la inflexión en el verso octavo
+# Grafica el pitch suavizado
 
 tg = selected("TextGrid")
 
