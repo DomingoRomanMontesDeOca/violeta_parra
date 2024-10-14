@@ -17,10 +17,6 @@ tiempo_total_sin_silencios = Get total duration of intervals where: 1, "is not e
 
 prom_tiempo_por_estrofa = tiempo_total_sin_silencios/5
 
-appendInfoLine: "Tiempo total (sin pausas) y promedio por estrofa"
-
-appendInfoLine: fixed$(tiempo_total_sin_silencios,3), tab$, fixed$(prom_tiempo_por_estrofa,3)
-
 
 
 
@@ -75,3 +71,11 @@ for i to n_intervalos_tier_1
    endif
 
 endfor
+
+
+
+appendInfoLine: "composicion,caracter,tiempo total,promedio por estrofa"
+
+appendInfoLine: composicion$,",",caracter$,",",tiempo_total_sin_silencios,",",prom_tiempo_por_estrofa
+
+
